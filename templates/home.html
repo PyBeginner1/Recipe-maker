@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Recipe Maker</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                background-color: #f2f2f2;
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 16px;
+            }
+
+            .ingredients {
+                text-align: center;
+                margin: 50px auto;
+                width: 500px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px #ccc;
+            }
+
+            h1 {
+                font-family: 'Pacifico', cursive;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 18px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 18px;
+                background-color: #ff7f50;
+                color: white;
+                border: 0;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ingredients">
+            <h1>Recipe Maker</h1>
+            <form action="/food", method="post">
+                <input type="text" name="Enter a Ingredient" placeholder="Enter Ingredients" /><br><br>
+                <input type="text" name="Enter a Food" placeholder="Enter a food that you want to prepare" /><br><br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+            </form>
+        </div>
+        <div style="text-align:center;">
+            <h2>{{ message }}</h2>
+        </div>
+        <div style="text-align:center;">
+            <h2>{{food_list}}</h2>
+        </div>
+    </body>
+</html>
